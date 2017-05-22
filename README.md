@@ -1,4 +1,4 @@
-# Unscented Kalman Filter
+# PID controller
 This Project is the ninth task (Project 4 of Term 2) of the Udacity Self-Driving Car Nanodegree program. The main goal of the project is to implement PID controller in C++ to maneuver the self driving car around the track in a [Simulator](https://github.com/udacity/CarND-PID-Control-Project/releases).
 
 The project was created with the Udacity [Starter Code](https://github.com/udacity/CarND-PID-Control-Project).
