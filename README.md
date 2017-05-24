@@ -1,11 +1,17 @@
 # PID controller
-This Project is the ninth task (Project 4 of Term 2) of the Udacity Self-Driving Car Nanodegree program. The main goal of the project is to implement PID controller in C++ to maneuver the self driving car around the track in a [Simulator](https://github.com/udacity/CarND-PID-Control-Project/releases).
+This Project is the ninth task (Project 4 of Term 2) of the Udacity Self-Driving Car Nanodegree program. The main goal of the project is to implement PID controller in C++ to steer the self driving car around the track in a [Simulator](https://github.com/udacity/CarND-PID-Control-Project/releases).
 
 The project was created with the Udacity [Starter Code](https://github.com/udacity/CarND-PID-Control-Project).
 
----
+## About PID controller
 
----
+A PID (Proportional, Integral, Derivative) controller is a control loop feedback controller which is widely used in different control systems. 
+
+While the PID controller is easy to implement, but it is not so easy to tune.
+
+## How it was tuned
+
+Initially, the controller was tuned with so-called [Ziegler–Nichols method](http://staff.guilan.ac.ir/staff/users/chaibakhsh/fckeditor_repo/file/documents/Optimum%20Settings%20for%20Automatic%20Controllers%20(Ziegler%20and%20Nichols,%201942).pdf). Generally speaking, it requires to set _Kd_ and _Ki_ to 0 and gradually increase _Kp_ before the car runs with stable and consistent oscillations. This value of _Kp_  and the oscillation period can be used to calculate optimal pid controller parameters by the [method](http://www.mstarlabs.com/control/znrule.html). Unfortunatly, the controller with resulted parameters was able to drive car around the track but with a lot of wobbling. That is why, parameters were further tuned manually by try-and-error process.
 
 ## Dependencies
 
