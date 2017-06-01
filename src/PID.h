@@ -42,6 +42,14 @@ public:
   * Calculate the total PID error.
   */
   double TotalError(double speed);
+  
+
+  
+
+  int   *window      ;
+  int    i           ;
+  double sum         ;
+  double add_i(double err);
 };
 
 #endif /* PID_H */
