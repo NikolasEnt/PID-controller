@@ -8,7 +8,8 @@ The project was created with the Udacity [Starter Code](https://github.com/udaci
 A PID (Proportional, Integral, Derivative) controller is a control loop feedback controller which is widely used in different control systems.
 
 Error is an input variable for the controller:
-cte = desired_state - measured_state 
+
+_cte = desired_state - measured_state_
 
 With the proportional band (P) only, the PID controller output is proportional to the cte. It takes into account only the present value of cte. Thanks to this part of controller, it is able to steer in the correct direction.
 
