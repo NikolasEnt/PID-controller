@@ -13,7 +13,7 @@ _cte = desired_state - measured_state_
 
 With the proportional band (_P_) only, the PID controller output is proportional to the cte. It takes into account only the present value of cte. Thanks to this part of controller, it is able to steer in the correct direction.
 
-Integral term (_I_) takes into account the integral of cte over the past time. It is used to reduce systematic bias. From my experianse of PID tuning on real-world systems and some experiments in the simulator, it was found out that we do not need to compute the integral for all time, but calculat it over only last n frames. In other case, we can accumulate errors because of left turns prevalens which can result in different behaviour of the controller during multi lap drive and even going off the track.
+Integral term (_I_) takes into account the integral of cte over the past time. It is used to reduce systematic bias. From my experianse of PID tuning on real-world systems and some experiments in the simulator, it was found out that we do not need to compute the integral for all time, but calculate it over only last n frames. In other case, we can accumulate errors because of left turns prevalens which can result in different behaviour of the controller during multi lap drive and even going off the track. A buffer was implemented for the purpose using the code from [stackoverflow](https://stackoverflow.com/questions/25024012/running-sum-of-the-last-n-integers-in-an-array).
 
 With derivative (_D_) part, the controller output is proportional to the rate of change of cte (its derivative). The parameter is used to reduce overshooting and dump oscillations caused by the _P_.
 
